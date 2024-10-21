@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "./ui/button";
 
-interface DeleteDialogI {
+interface ConfirmDeleteModalProps {
   title: "Flow" | "Deployment";
   id: string;
   name: string;
@@ -18,16 +18,16 @@ interface DeleteDialogI {
 }
 
 /**
- * 
- * @param DeleteDialogI
+ *
+ * @param ConfirmDeleteModalProps
  * @returns a delete dialog modal with 2 actions: cancel or confirm
  */
-export const DeleteDialog = ({
+export const ConfirmDeleteModal = ({
   title,
   id,
   name,
   handleDelete,
-}: DeleteDialogI) => {
+}: ConfirmDeleteModalProps) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -58,7 +58,6 @@ export const DeleteDialog = ({
           </DialogClose>
           <DialogClose asChild>
             <Button
-              // type="submit"
               onClick={handleDelete}
               data-testid={`delete.confirm.${id}`}
               variant="destructive"

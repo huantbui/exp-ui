@@ -1,17 +1,17 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import { DeleteDialog } from "./delete-dialog";
+import { ConfirmDeleteModal } from "./ConfirmDeleteModal";
 
 const handleDelete = vi.fn();
 
-describe("Component: DeleteDialog", () => {
+describe("Component: ConfirmDeleteModal", () => {
   beforeEach(() => {
     vi.restoreAllMocks();
   });
   it("should have correct dynamic data displayed", () => {
     const NAME = "test-name";
     render(
-      <DeleteDialog
+      <ConfirmDeleteModal
         title="Flow"
         id={"id-123"}
         name={NAME}
@@ -30,7 +30,7 @@ describe("Component: DeleteDialog", () => {
   it("should trigger handleDelete when confirm", () => {
     const NAME = "test-name";
     render(
-      <DeleteDialog
+      <ConfirmDeleteModal
         title="Flow"
         id={"id-123"}
         name={NAME}
@@ -50,7 +50,7 @@ describe("Component: DeleteDialog", () => {
   it("should not trigger handleDelete when cancel", () => {
     const NAME = "test-name";
     render(
-      <DeleteDialog
+      <ConfirmDeleteModal
         title="Flow"
         id={"id-123"}
         name={NAME}

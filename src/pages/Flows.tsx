@@ -1,4 +1,4 @@
-import { DeleteDialog } from "@/components/delete-dialog";
+import { ConfirmDeleteModal } from "@/components/ConfirmDeleteModal";
 import {
   Card,
   CardContent,
@@ -27,7 +27,7 @@ const FLOWS = [
   {
     id: "f-123",
     name: "abyssal",
-    createdAt: new Date().toLocaleDateString(),
+    createdAt: new Date(),
     deployments: null,
   },
   {
@@ -38,7 +38,7 @@ const FLOWS = [
   },
   {
     id: "f-789",
-    name: "automation-deployment-paremters",
+    name: "automation-deployment-parameters",
     createdAt: new Date(),
     deployments: null,
   },
@@ -88,7 +88,7 @@ const Flows: FC = () => {
                       <EllipsisVertical />
                     </PopoverTrigger>
                     <PopoverContent>
-                      <DeleteDialog
+                      <ConfirmDeleteModal
                         title="Flow"
                         id={id}
                         name={name}

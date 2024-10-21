@@ -1,4 +1,4 @@
-import { DeleteDialog } from "@/components/delete-dialog";
+import { ConfirmDeleteModal } from "@/components/ConfirmDeleteModal";
 import {
   Card,
   CardContent,
@@ -107,7 +107,7 @@ const Deployments: FC = () => {
                       {/* </Button> */}
                     </PopoverTrigger>
                     <PopoverContent>
-                      <DeleteDialog
+                      <ConfirmDeleteModal
                         title="Deployment"
                         id={id}
                         name={name}
