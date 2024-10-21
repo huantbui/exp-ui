@@ -9,6 +9,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "./ui/button";
+import { CircleAlert } from "lucide-react";
 
 interface ConfirmDeleteModalProps {
   title: "Flow" | "Deployment";
@@ -37,7 +38,9 @@ export const ConfirmDeleteModal = ({
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle>Delete {title}</DialogTitle>
+          <DialogTitle className="flex items-center">
+            <CircleAlert color="hsl(var(--destructive))" className="pr-1"/> Delete {title}
+          </DialogTitle>
           <DialogDescription data-testid="delete.description">
             Are you sure you want to delete {name}?
           </DialogDescription>
@@ -53,7 +56,7 @@ export const ConfirmDeleteModal = ({
               variant="secondary"
               data-testid={`delete.cancel.${id}`}
             >
-              Cancel
+              Close
             </Button>
           </DialogClose>
           <DialogClose asChild>
