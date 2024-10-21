@@ -1,7 +1,7 @@
 # EXP-UI
 
 
-### Development
+### Run Application
 - run: `dev`
 
 
