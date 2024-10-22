@@ -21,8 +21,8 @@ describe("Component: ConfirmDeleteModal", () => {
     const deleteButton = screen.getByTestId("delete.id-123");
     fireEvent.click(deleteButton);
 
-    const totalItemsAfter = screen.getByTestId("delete.description");
-    expect(totalItemsAfter.textContent).toBe(
+    const description = screen.getByTestId("delete.description");
+    expect(description.textContent).toBe(
       `Are you sure you want to delete ${NAME}?`
     );
   });
